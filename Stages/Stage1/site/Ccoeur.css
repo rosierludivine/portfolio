@@ -1,0 +1,186 @@
+body {
+  background: #FEF0EB;
+  width: 100%;
+  overflow-x: hidden;
+  padding: inherit;
+  margin: inherit;
+  /* donnez une bonne tête */
+  color: #white;
+  font-family: Verdana, sans-serif;
+}
+
+/*Menu hamburger */
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+  font-family: Verdana, sans-serif;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #BD632F;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: #F3C969;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -20px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+/* pour qu'ill soit rapide  */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #BD632F;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/*  transformer les tranches de burger dans une croix  */
+#menuToggle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #BD632F;
+}
+
+/*Cacher celui du milieu */
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*La derniere va dans laustre sens  */
+#menuToggle input:checked~span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/* Mettre en haut à gauche de l'écran */
+#menu {
+  border-radius: 5px;
+  position: absolute;
+  width: 100px;
+  margin: -76px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* arrêter le scintillement du texte en safari*/
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked~ul {
+  transform: none;
+}
+
+/*Hamburger terminé*/
+h1{
+  width: 100%;
+  text-align: center;
+}
+pre {
+  margin-left: 45%;
+  position: absolute;
+  z-index: 9;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: Verdana, sans-serif;
+  text-decoration: underline;
+}
+@media screen and (max-width: 9000px){
+.articles{
+  margin: 0 14%;
+  width: 72%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+}
+.article{
+  height: 100px;
+  border-radius: 5px;
+  background: #FFCEAD;
+  text-align: right;
+  block-size:auto;
+}
+.coeur{
+  width: 10%;
+  height: auto;
+  margin-right: 5px;
+}
+.coeur:hover{
+  fill:red;
+}
+p {margin-left: 5px;
+  text-align: left;
+  font-size: 20px;
+  font-family: Verdana, sans-serif;
+}
+
+.jordan1LowWhite {
+  width: 100%;
+
+}
+.navdroite{
+  margin-left: 80%;
+}
+.loupe{
+  width: 10%;
+}
+.panier
+{
+  width: 11%;
+}
+.buttonSearch{
+  opacity: none;
+  width: 15%;
+  border-radius: 5px;
+  border:none;
+  background:#FEF0EB;
+}
+.utilisateur{
+  visibility: visible;
+  width: 15%;
+  border-radius: 5px;
+  border:none;
+  background:#FEF0EB;
+}

@@ -1,0 +1,14 @@
+.hamburger {
+  display: flex;
+  color: Black;
+  width: 200px;
+  height: 750px;
+  background-color: #F0BAE2;
+  position: absolute;
+  border-radius: 5px;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+}

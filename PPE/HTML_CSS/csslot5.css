@@ -1,0 +1,150 @@
+body{
+  background-color: #E5E7E9  ;
+}
+.page1{
+  padding: 20px;
+  position: relative;
+  margin-right: 3%;
+  margin-left:3%;
+  display: block;
+  color: Black;
+  width: auto;
+  height: 1000px;
+  background-color: white ;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+h1{
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  text-align: center;
+  text-decoration: underline;
+}
+/* nav bar */
+nav{
+  border-radius: 5px;
+  background-color: #909497 ;
+  height:56px ;
+  width:100% ;
+  border-bottom: 1px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+li {
+  float: left;
+}
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 18px 16px;
+  text-decoration: none;
+}
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+li.dropdown {
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+li:last-child{
+  float: right;
+  color: white;
+}
+.imagexpo{
+  height:50px ;
+  border-radius: 3px;
+  margin-right: 5px ;
+  margin-top: 2px;
+}
+/* nav bar FIN */
+
+.presentation{
+  width: auto;
+  height: 300px;
+  margin:5px;
+  margin-left: 3%;
+  margin-right: 3%;
+  background-color:#AAB7B8;
+  border-radius: 5px;
+  color: white;
+}
+table{
+padding-top: 100px;
+margin: auto;
+border-collapse: collapse;
+
+}
+ td,tr{
+   margin:20%;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 5px;
+  color: lavender;
+ }
+h2{
+  float: none;
+  padding-left: 7px;
+  text-decoration:underline;
+  text-align: left;
+}
+p{ padding-left: 7px;
+  height: 400px;
+}
+
+.caractéristique{
+  width: auto;
+  height: 400px;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin: auto;
+  background-color: #5F6A6A ;
+  border-radius: 5px;
+  color: white;
+}
+.bloc3{
+
+  width: auto;
+  height: 150px;
+  margin:5px;
+  margin-left: 3%;
+  margin-right: 3%;
+  background-color:#839192  ;
+  border-radius: 5px;
+  color: white;
+}
+a{
+  color: Lavender ;
+}
+pre1{
+  color: red;
+  margin: auto;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 200%;
+}

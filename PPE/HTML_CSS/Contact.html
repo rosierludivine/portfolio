@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="cssContact.css">
+<head>
+  <meta charset="utf-8">
+  <title>Contact</title>
+</head>
+<body>
+  <div class="page">
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil </a></li>
+        <li><a href="#presentation">Presentation de l'entreprise</a></li>
+        <li><a href="#Description">Description</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Lot</a>
+          <div class="dropdown-content">
+            <a href="lot1.html">Lot 1</a>
+            <a href="lot2.html">Lot 2</a>
+            <a href="lot3.html">Lot 3</a>
+            <a href="lot4.html">Lot 4</a>
+            <a href="lot5.html">Préstation</a>
+          </div>
+          </li>
+          <li><a href="Contact.html">Contact</a></li>
+        <li ><img class="imagexpo" src="XEFI.png" alt=""></li>
+      </ul>
+    </nav>
+    <br>
+    <h2 id="presentation"> </h2>
+    <fieldset class="field">
+        <legend>Informations personnel</legend>
+    <label for="Nom"> Nom </label>
+    <input type="text" name="Nom" value="" placeholder=Nom autofocus>
+        <br><br>
+    <label for="Prenom">Prenom </label>
+    <input type="text" name="Prenom" value="" placeholder=Prénom tabindex="2">
+        <br><br>
+    <label for="date">Date de Naissance </label>
+    <input type="date" name="date de Naissance" value="date de Naissance" tabindex="3">
+        <br><br>
+    <input type="radio" id="hommes" name="gender" value="hommes"tabindex="6">
+    <label for="hommes">hommes</label>
+    <br>
+    <input type="radio" id="femme" name="gender" value="femme"tabindex="4">
+    <label for="femme">femme</label>
+        <br><br>
+    </fieldset>
+  <br><br>
+<fieldset>
+  <legend> Informations Compte</legend>
+<label for="email">email</label>
+<input type="email" name="email" value="" placeholder="Email" tabindex="1" pattern="">
+  <br><br>
+<label for="password">password </label>
+<input type="password" name="password" value="password"placeholder="password"tabindex="7">
+  <br><br>
+</fieldset>
+<br><br>
+<label for="texte"></label>
+<textarea name="textarea" rows="8" cols="80" placeholder="Entrez vos motivations"></textarea>
+  <br><br>
+<label for=""></label>
+<input type="submit" name="Envoye " value="Envoyé">
+</div>
+</body>
+</html>

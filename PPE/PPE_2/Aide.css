@@ -1,0 +1,200 @@
+.hamburger {
+  display: flex;
+  color: Black;
+  width: 200px;
+  height: 750px;
+  background-color: #F0BAE2;
+  position: absolute;
+  border-radius: 5px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* donnez une bonne tête */
+  color: #white;
+}
+
+/*Menu hamburger */
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle a {
+  text-decoration: none;
+  color: #184059;
+  transition: color 0.3s ease;
+}
+
+#menuToggle a:hover {
+  color: #5D8AA6;
+}
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
+}
+
+/* pour qu'ill soit rapide  */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #184059;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+    opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+
+/*  transformer les tranches de burger dans une croix  */
+#menuToggle input:checked~span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #184059;
+}
+
+/*Cacher celui du milieu */
+#menuToggle input:checked~span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*La derniere va dans lautre sens  */
+#menuToggle input:checked~span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/* Mettre en haut à gauche de l'écran */
+#menu {
+  border-radius: 5px;
+  position: absolute;
+  width: 100px;
+  margin: -76px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #F0BAE2;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* arrêter le scintillement du texte en safari*/
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+#menuToggle input:checked~ul {
+  transform: none;
+}
+
+/*Hamburger terminé*/
+/* Formulaire*/
+form {
+  /* Uniquement centrer le formulaire sur la page */
+  margin-top: 10px;
+  margin-left: 210px;
+  margin-right: 10px;
+  /* Encadré pour voir les limites du formulaire */
+  padding: 1em;
+  border: 1px solid #CCC;
+  border-radius: 1em;
+  display: grid;
+  grid-template-columns:  repeat(3, 1fr);
+  grid-gap: 30px;
+}
+@media screen and (max-width: 9000px){
+  form{
+    grid-template-columns:  repeat(2, 1fr);
+  }
+  div.Description{
+    grid-column: 1 / 2;
+    grid-row: 4 ;
+  }
+}
+form div{
+}
+div.Description{
+  grid-column: 1 / 3;
+  grid-row: 4;
+  grid-template-columns: 3 / 3;
+}
+div.bouttonEnvoyer{
+  grid-column: 3 / 3;
+  grid-row: 5 ;
+}
+textarea {
+  grid-column: auto;
+  font: 1em sans-serif;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  width: 100%;
+}
+
+input {
+  /* Pour s'assurer que tous les champs texte ont la même police.
+     Par défaut, les textarea ont une police monospace */
+  font: 1em sans-serif;
+  border-radius: 5px;
+  /* Pour que tous les champs texte aient la même dimension */
+  box-sizing: border-box;
+  /* Pour harmoniser le look & feel des bordures des champs texte */
+  border: 1px solid #999;
+}
+
+input:focus, textarea:focus {
+  /* Pour souligner légèrement les éléments actifs */
+  border-color: #000;
+}
+
+textarea {
+  /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+  vertical-align: top;
+  /* Pour donner assez de place pour écrire du texte */
+  height: 5em;
+}
+
+.button {
+  /* Pour placer le bouton à la même position que les champs texte */
+  padding-left: 90px;
+  /* même taille que les étiquettes */
+}
+
+button {
+  /* Cette marge supplémentaire représente grosso modo le même espace que celui
+     entre les étiquettes et les champs texte */
+  margin-left: .5em;
+}
+
+
+/* Fin du fomulaire*/

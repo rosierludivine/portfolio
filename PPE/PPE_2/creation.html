@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="stylesheet" href="creation.css">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <div class="pageAccueil">
+    <div class="hamburger">
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="html.html">
+              <li>Accueil</li>
+            </a>
+            <a href="creation.html">
+              <li>Création de ticket</li>
+            </a>
+            <a href="MesTicket.html">
+              <li>Mes tickets</li>
+            </a>
+            <a href="Aide.html">
+              <li>Aide</li>
+            </a>
+            <a href="Contact.html">
+              <li>Contact</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="renseignement">
+      <form class="formulaireNewTicket" action="index.html" method="post">
+        <div class="NomEntreprise">
+          <label for="nameEntreprise">Entreprise :</label>
+          <input type="text" id="name" name="user_name" placeholder="Nom de l'entreprise">
+        </div>
+        <div class="Nom">
+          <label for="name">Nom :</label>
+          <input type="text" id="name" name="user_name" placeholder="Nom">
+        </div>
+        <div class="Prenom">
+          <label for="surName">Prenom :</label>
+          <input type="text" id="name" name="user_name" placeholder="Prenom">
+        </div>
+        <div class="Nbrpersonneconcerne">
+          <label for="surName">Nombre de personne concerne :</label>
+          <input type="text" id="name" name="user_name" placeholder="Nombre de personne">
+        </div>
+        <div class="Appareilconcerne">
+          <label for="Concerne">Appareil concerne :</label>
+          <input type="text" id="name" name="user_name" placeholder="Prenom">
+        </div>
+        <div class="Description">
+          <label for="Descripition"></label>
+          <textarea name="name" rows="8" cols="80" placeholder="Description du probleme :"></textarea>
+        </div>
+        <div class="bouttonEnvoyer">
+          <label for="bouton"></label>
+          <input type="button" name="" value="Envoyer">
+        </div>
+      </form>
+    </div>
